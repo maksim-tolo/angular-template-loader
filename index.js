@@ -1,7 +1,7 @@
 var loaderUtils = require('loader-utils');
 var path = require('path');
 
-var templateUrlRegex = /templateUrl\s*:\s*['"`](.*?)['"`]\s*([,}\n])/gm;
+var templateUrlRegex = /template(Url)?\s*:\s*['"`]((?!\<).*?)['"`]\s*([,}\n])/gm;
 
 module.exports = function(source) {
   var context = this;
